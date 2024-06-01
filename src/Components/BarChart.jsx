@@ -54,27 +54,7 @@ const PieChart = ({ data }) => {
       <div className='md:w-[40%] w-[80%] mt-4'>
         <Pie 
           data={chartData}
-          options={{
-            
-            scales: {
-              x: {
-                grid: {
-                  color: '#6b6b6b',
-                },
-                ticks: {
-                  color: '#6b6b6b',
-                }
-              },
-              y: {
-                grid: {
-                  color: '#6b6b6b',
-                },
-                ticks: {
-                  color: '#6b6b6b',
-                }
-              }
-            }
-          }}
+          
         />
       </div>
       <p className='mt-2 p-2 border rounded-lg w-[80%]'>Categorizing alerts helps in understanding the nature of the threats. For example, a high number of "Potentially Bad Traffic" alerts could indicate network scans, while a large number of "Misc Attack" alerts could suggest infections. This information can guide prioritization of security responses and mitigation strategies. One can get the knowledge of threats to their network and can save it from damage in future.</p>
