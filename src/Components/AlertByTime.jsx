@@ -72,7 +72,30 @@ const AlertByTime = ({ data }) => {
     <div className='w-full flex flex-col items-center'>
       <h2 className='font-bold text-3xl my-6'>Alerts by Time</h2>
       <div className='md:w-[80%] w-[95%]'>
-      <Line data={chartData} />
+      <Line 
+        data={chartData}
+        options={{
+            
+            scales: {
+              x: {
+                grid: {
+                  color: '#6b6b6b',
+                },
+                ticks: {
+                  color: '#6b6b6b',
+                }
+              },
+              y: {
+                grid: {
+                  color: '#6b6b6b',
+                },
+                ticks: {
+                  color: '#6b6b6b',
+                }
+              }
+            }
+          }}
+        />
       </div>
       <p className='border rounded-lg p-2 mt-2 w-[80%]'>The above chart help identify trends and patterns in alert activity. Spikes in the number of alerts at certain times might correlate with specific events, such as a new attack wave or increased scanning activity. It can also help in understanding the time-based behavior of potential threats.
         <br /> As the above data is for approximately 4 hours, we have the number of alert for every hour depicted in the graph. In case, if we have a big data, then it can be used to predict alert timings for future to save resource or other purposes.</p>
