@@ -52,9 +52,31 @@ const AlertDestination = ({ data }) => {
 
   return (
     <div className='flex flex-col w-full h-[100vh] items-center'>
-      <h2 className='font-bold text-3xl my-6'>Alerts by Destination IP</h2>
+      <h2 className='font-bold text-3xl my-6'>Alerts by Destination Port</h2>
       <div className='md:w-[60%] w-[80%] mt-4'>
-      <Bar data={chartData} />
+      <Bar data={chartData}
+        options={{
+            
+            scales: {
+              x: {
+                grid: {
+                  color: '#6b6b6b',
+                },
+                ticks: {
+                  color: '#6b6b6b',
+                }
+              },
+              y: {
+                grid: {
+                  color: '#6b6b6b',
+                },
+                ticks: {
+                  color: '#6b6b6b',
+                }
+              }
+            }
+          }}
+        />
       </div>
       <p className='border rounded-lg p-2 mt-2 w-[80%]'>The above graph depicts the most common destination ports involved in security alert. <br />As we can see that a high concentration of alerts targeting specific port 1433 could suggest attempts to exploit database vulnerabilities. <br /> It typically indicates potential targeted attacks or scanning activities specifically aimed at Microsoft SQL Server databases, as port 1433 is the default port for this service.</p>
     </div>
