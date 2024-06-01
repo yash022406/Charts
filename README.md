@@ -1,8 +1,6 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live link: https://charts-mauve-six.vercel.app/
+Skills involved: ReactJS, Javascript, TailwindCSS, Javascript Library.
+The javascript library used to implement Charts is Chart.js: https://www.chartjs.org/docs/latest/
+After looking at the given data set, I concluded that the given data is about the requests coming on a firewall of a system and all the graphs implemented in my website displays important information regarding the type of requests found and how a system can be protected from attacks or if resources can be saved for future.
