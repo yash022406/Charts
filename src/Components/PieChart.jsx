@@ -75,7 +75,30 @@ const LineChart = ({ data }) => {
     <div className='w-full flex flex-col h-[100vh] items-center'>
       <h2 className='font-bold text-3xl my-6'>Alerts by Source IP</h2>
       <div className='md:w-[80%] w-[95%] mt-4'>
-      <Line data={chartData} />
+      <Line 
+        data={chartData}
+        options={{
+            
+            scales: {
+              x: {
+                grid: {
+                  color: '#6b6b6b',
+                },
+                ticks: {
+                  color: '#6b6b6b',
+                }
+              },
+              y: {
+                grid: {
+                  color: '#6b6b6b',
+                },
+                ticks: {
+                  color: '#6b6b6b',
+                }
+              }
+            }
+          }}
+        />
       </div>
       <p className='w-[80%] mt-2 p-2 border rounded-lg'>The above graph shows different number of alert thrown by a particular Source IP Address. With the help of this data we can say that the IP Address 8.42.77.171 is either a potential attacker to our firewall or can be a known IP address requesting for some data. Frequent requests from a single source IP in a firewall could suggest legitimate traffic, malicious activity like DDoS attacks, misconfigurations, network scanning, or automated bot activity.</p>
     </div>
